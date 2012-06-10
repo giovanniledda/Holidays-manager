@@ -1,0 +1,33 @@
+store_create:
+  pattern:  /create
+  defaults: { _controller: StoreBundle:Default:create }
+    
+store_create_product:
+  pattern:  /create-product
+  defaults: { _controller: StoreBundle:Default:createProduct }
+  
+store_show:
+  pattern:  /show/{id}
+  defaults: { _controller: StoreBundle:Default:show }
+  requirements:
+    id:  \d+
+
+store_showall:
+  pattern:  /showall
+  defaults: { _controller: StoreBundle:Default:showAll }
+  
+store_update:
+  pattern:  /update/{id}
+  defaults: { _controller: StoreBundle:Default:update }
+  requirements:
+    id:  \d+
+  
+store_update_product_rating:
+  pattern:  /update_rating
+  defaults: { _controller: StoreBundle:Default:updateProductRating }
+    
+store_remove:
+  pattern:  /remove/{id}
+  defaults: { _controller: StoreBundle:Default:remove }
+  requirements:
+    id:  \d+

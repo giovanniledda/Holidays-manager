@@ -1,0 +1,20 @@
+ZobaSecurityBundle:
+    resource: "@ZobaSecurityBundle/Resources/config/routing.yml"
+    prefix:   /
+
+TaskBundle:
+    resource: "@TaskBundle/Resources/config/routing.yml"
+    prefix:   /
+
+StoreBundle:
+    resource: "@StoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+HelloBundle:
+    resource: "@HelloBundle/Resources/config/routing.yml"
+    prefix:   /
+
+# Internal routing configuration to handle ESI
+#_internal:
+#   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#   prefix:   /_internal

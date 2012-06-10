@@ -1,0 +1,13 @@
+task_new:
+  pattern:  /task_new
+  defaults: { _controller: TaskBundle:Default:new }
+
+task_success:
+  pattern:  /task_success
+  defaults: { _controller: TaskBundle:Default:success }
+
+task_show:
+  pattern:  /task/{id}
+  defaults: { _controller: TaskBundle:Default:show }
+  requirements:
+    id:  \d+
