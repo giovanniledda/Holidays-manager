@@ -20,6 +20,7 @@ class AppKernel extends Kernel {
             new Zoba\StoreBundle\StoreBundle(),
             new Zoba\TaskBundle\TaskBundle(),
             new Zoba\SecurityBundle\ZobaSecurityBundle(),
+            new Zoba\HolidaysManagerBundle\ZobaHolidaysManagerBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

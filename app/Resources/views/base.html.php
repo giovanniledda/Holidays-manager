@@ -25,7 +25,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </a>
-                        <a class="brand" href="#">Project name</a>
+                        <a class="brand" href="#">Holidays Manager</a>
 
                         <div class="btn-group pull-right">
                             <?php if ($app->getUser()): ?>
@@ -59,15 +59,15 @@
                     <div class="well sidebar-nav">
                         <ul class="nav nav-list">
                             <li class="nav-header">Sidebar</li>
-                            <li class="active"><a href="#">Link</a></li>
+                            <li class="active"><a href="#">Home</a></li>
                             <li>
-                                <a href="<?php echo $view['router']->generate('task_new'); ?>">
-                                    Crea un task
+                                <a href="<?php echo $view['router']->generate('new_extratime'); ?>">
+                                    <?php echo $view['translator']->trans('Add an Extratime'); ?>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo $view['router']->generate('store_showall'); ?>">
-                                    Vedi prodotti
+                                <a href="<?php echo $view['router']->generate('showall_extratime'); ?>">
+                                    <?php echo $view['translator']->trans('Show all Extratimes'); ?>
                                 </a>
                             </li>
                         </ul>
