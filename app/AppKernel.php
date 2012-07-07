@@ -17,7 +17,6 @@ class AppKernel extends Kernel {
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new Zoba\StoreBundle\StoreBundle(),
-            new Zoba\TaskBundle\TaskBundle(),
             new Zoba\SecurityBundle\ZobaSecurityBundle(),
             new Zoba\HolidaysManagerBundle\ZobaHolidaysManagerBundle(),
         );
