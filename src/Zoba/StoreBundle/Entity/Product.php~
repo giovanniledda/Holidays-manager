@@ -37,7 +37,7 @@ class Product {
      * @ORM\Column(type="decimal", scale=2)
      */
     protected $rating = 0;
-    
+
     /**
      * @ORM\Column(type="integer")
      */
@@ -200,6 +200,24 @@ class Product {
      */
     public function getRating() {
         return $this->rating;
+    }
+
+    /**
+     * Set rate_number
+     *
+     * @param integer $rateNumber
+     */
+    public function setRateNumber($rateNumber) {
+        $this->rate_number = $rateNumber;
+    }
+
+    /**
+     * Get rate_number
+     *
+     * @return integer 
+     */
+    public function getRateNumber() {
+        return $this->rate_number;
     }
 
 }

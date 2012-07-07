@@ -16,7 +16,6 @@ class AppKernel extends Kernel {
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
-            new Zoba\HelloBundle\HelloBundle(),
             new Zoba\StoreBundle\StoreBundle(),
             new Zoba\TaskBundle\TaskBundle(),
             new Zoba\SecurityBundle\ZobaSecurityBundle(),
