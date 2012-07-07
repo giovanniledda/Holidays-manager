@@ -1,6 +1,6 @@
 <?php $view->extend('::base.html.php') ?>
 
-<?php $view['slots']->set('title', 'Il mio fighissimo test') ?>
+<?php $view['slots']->set('title', 'Holidays Manager (beta)') ?>
 
 <?php $view['slots']->start('body') ?>
 

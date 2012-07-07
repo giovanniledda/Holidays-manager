@@ -61,12 +61,12 @@
                             <li class="nav-header">Sidebar</li>
                             <li class="active"><a href="#">Home</a></li>
                             <li>
-                                <a href="<?php echo $view['router']->generate('new_extratime'); ?>">
+                                <a href="<?php echo $view['router']->generate('create_extra_time'); ?>">
                                     <?php echo $view['translator']->trans('Add an Extratime'); ?>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo $view['router']->generate('showall_extratime'); ?>">
+                                <a href="<?php echo $view['router']->generate('showall_extra_time'); ?>">
                                     <?php echo $view['translator']->trans('Show all Extratimes'); ?>
                                 </a>
                             </li>

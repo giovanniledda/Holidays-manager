@@ -3,6 +3,7 @@
 namespace Zoba\HolidaysManagerBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Table(name="extra_time")
@@ -19,11 +20,13 @@ class ExtraTime {
 
     /**
      * @ORM\Column(type="date")
+     * @Assert\NotBlank()
      */
     protected $date;
 
     /**
      * @ORM\Column(type="decimal", scale=2)
+     * @Assert\NotBlank()
      */
     protected $hours = 0;
 

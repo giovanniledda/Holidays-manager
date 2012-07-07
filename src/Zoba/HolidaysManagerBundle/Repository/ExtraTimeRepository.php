@@ -1,8 +1,8 @@
 <?php
 
-namespace Zoba\HolidaysManagerBundle\ExtraTime;
+namespace Zoba\HolidaysManagerBundle\Repository;
 
-use Doctrine\ORM\EntityExtraTime;
+use Doctrine\ORM\EntityRepository;
 
 /**
  * ExtraTimeRepository

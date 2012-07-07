@@ -2,11 +2,17 @@ holidays_index:
   pattern:  /holidays_index
   defaults: { _controller: ZobaHolidaysManagerBundle:Default:index }
 
-new_extratime:
-  pattern:  /new_extratime
-  defaults: { _controller: ZobaHolidaysManagerBundle:Default:index }
+create_extra_time:
+  pattern:  /create_extra_time
+  defaults: { _controller: ZobaHolidaysManagerBundle:Default:create }
 
-showall_extratime:
-  pattern:  /showall_extratime
-  defaults: { _controller: ZobaHolidaysManagerBundle:Default:index }
+show_extra_time:
+  pattern:  /extra_time/{id}
+  defaults: { _controller: ZobaHolidaysManagerBundle:Default:show }
+  requirements:
+    id:  \d+
+
+showall_extra_time:
+  pattern:  /showall_extra_time
+  defaults: { _controller: ZobaHolidaysManagerBundle:Default:showall }
 
