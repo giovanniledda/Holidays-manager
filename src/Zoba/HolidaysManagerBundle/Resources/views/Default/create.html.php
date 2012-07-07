@@ -1,5 +1,5 @@
 <?php $view->extend('::base.html.php'); ?>
-
+<?php echo $view->render('::nav-list-class.html.php', array('slot_name' => 'nav-list-li-class-create')); ?>
 
 <?php $view['slots']->start('body'); ?>
 <?php //$view['form']->setTheme($form, array('TaskBundle:Form')) ?>

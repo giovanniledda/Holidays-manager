@@ -72,7 +72,7 @@ class DefaultController extends Controller {
                 ->getRepository('ZobaHolidaysManagerBundle:ExtraTime')
                 ->findAll();
 
-        return $this->render('HolidaysManagerBundle:Default:showall.html.php', array('extra_times' => $extra_times));
+        return $this->render('ZobaHolidaysManagerBundle:Default:show-all.html.php', array('extra_times' => $extra_times));
     }
 
 }

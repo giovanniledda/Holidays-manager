@@ -59,13 +59,15 @@
                     <div class="well sidebar-nav">
                         <ul class="nav nav-list">
                             <li class="nav-header">Sidebar</li>
-                            <li class="active"><a href="#">Home</a></li>
-                            <li>
+                            <li <?php $view['slots']->output('nav-list-li-class-home'); ?>>
+                                <a href="<?php echo $view['router']->generate('holidays_index'); ?>">Home</a>
+                            </li>
+                            <li <?php $view['slots']->output('nav-list-li-class-create'); ?>>
                                 <a href="<?php echo $view['router']->generate('create_extra_time'); ?>">
                                     <?php echo $view['translator']->trans('Add an Extratime'); ?>
                                 </a>
                             </li>
-                            <li>
+                            <li <?php $view['slots']->output('nav-list-li-class-show-all'); ?>>
                                 <a href="<?php echo $view['router']->generate('showall_extra_time'); ?>">
                                     <?php echo $view['translator']->trans('Show all Extratimes'); ?>
                                 </a>
@@ -75,7 +77,7 @@
                 </div><!--/span-->
 
                 <div class="span9">
-                    <?php $view['slots']->output('body') ?>
+                    <?php $view['slots']->output('body'); ?>
                     <!--Body content-->
                 </div>
             </div>

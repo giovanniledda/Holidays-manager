@@ -1,4 +1,5 @@
 <?php $view->extend('::base.html.php') ?>
+<?php echo $view->render('::nav-list-class.html.php', array('slot_name' => 'nav-list-li-class-home')); ?>
 
 <?php $view['slots']->set('title', 'Holidays Manager (beta)') ?>
 
