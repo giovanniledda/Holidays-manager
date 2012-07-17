@@ -12,6 +12,12 @@ show_extra_time:
   requirements:
     id:  \d+
 
+remove_extra_time:
+  pattern:  /extra_time_remove/{id}
+  defaults: { _controller: ZobaHolidaysManagerBundle:Default:remove }
+  requirements:
+    id:  \d+
+
 showall_extra_time:
   pattern:  /showall_extra_time
   defaults: { _controller: ZobaHolidaysManagerBundle:Default:showall }

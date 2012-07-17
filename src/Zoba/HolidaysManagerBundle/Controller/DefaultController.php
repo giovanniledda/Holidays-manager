@@ -17,11 +17,19 @@ class DefaultController extends Controller {
      */
     public function indexAction() {
         
+        $holiday_days_done = $this->getDoctrine()
+                ->getRepository('ZobaHolidaysManagerBundle:ExtraTime')
+                ->sumAllHolidaysHours();
+        
+        $extra_hours = $this->getDoctrine()
+                ->getRepository('ZobaHolidaysManagerBundle:ExtraTime')
+                ->sumAllExtratimeHours();
+        
         $holidays_days = $this->getDoctrine()
                 ->getRepository('ZobaHolidaysManagerBundle:ExtraTime')
                 ->calculateHolidays();
         
-        return $this->render('ZobaHolidaysManagerBundle:Default:index.html.php', array('holidays_days' => $holidays_days));
+        return $this->render('ZobaHolidaysManagerBundle:Default:index.html.php', array('holidays_days' => $holidays_days, 'holiday_days_done' => $holiday_days_done, 'extra_hours' => $extra_hours));
     }
 
     /**
@@ -63,10 +71,6 @@ class DefaultController extends Controller {
                 ->getRepository('ZobaHolidaysManagerBundle:ExtraTime')
                 ->find($id);
 
-//        $task = $this->getDoctrine()
-//                ->getRepository('TaskBundle:Task')
-//                ->find($id);
-        
         return $this->render('ZobaHolidaysManagerBundle:Default:show.html.php', array('extra_time' => $extra_time));
     }
 
@@ -79,6 +83,34 @@ class DefaultController extends Controller {
                 ->findAll();
 
         return $this->render('ZobaHolidaysManagerBundle:Default:show-all.html.php', array('extra_times' => $extra_times));
+    }
+
+    /**
+     */
+    public function showMoreRecentAction() {
+
+        $extra_times = $this->getDoctrine()
+                ->getRepository('ZobaHolidaysManagerBundle:ExtraTime')
+                ->findAllOrderedByDate('DESC', 3);
+
+        return $this->render('ZobaHolidaysManagerBundle:Default:recent-items-widget.html.php', array('extra_times' => $extra_times));
+    }
+
+    /**
+     */
+    public function removeAction(Request $request, $id) {
+
+        $extra_time = $this->getDoctrine()
+                ->getRepository('ZobaHolidaysManagerBundle:ExtraTime')
+                ->find($id);
+
+//        $em = $this->getDoctrine()->getEntityManager();
+//        $em->remove($extra_time);
+//        $em->flush();
+
+        $this->get('session')->setFlash('notice', $this->get('translator')->trans('Extratime #%id% has been removed!', array('%id%' => $id)));
+
+        return $this->forward('ZobaHolidaysManagerBundle:Default:showAll');
     }
 
     /**

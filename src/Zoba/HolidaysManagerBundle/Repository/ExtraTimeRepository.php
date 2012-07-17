@@ -12,10 +12,11 @@ use Doctrine\ORM\EntityRepository;
  */
 class ExtraTimeRepository extends EntityRepository {
 
-    public function findAllOrderedByDate($criteria = 'ASC') {
+    public function findAllOrderedByDate($criteria = 'ASC', $limit = 100) {
 
         return $this->createQueryBuilder('et')
                         ->orderBy('et.date', $criteria)
+                        ->setMaxResults($limit)
                         ->getQuery()
                         ->getResult();
     }

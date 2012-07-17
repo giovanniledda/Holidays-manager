@@ -14,6 +14,50 @@
                 <source>Clear all Extratimes</source>
                 <target>Elimina tutti gli straordinari</target>
             </trans-unit>
+            <trans-unit id="4">
+                <source>Quick Shortcuts</source>
+                <target>Menu rapido</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>Extratimes list</source>
+                <target>Elenco straordinari</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>Extratime</source>
+                <target>Straordinario</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>Hours of holidays done in this day: %hours%</source>
+                <target>Ore di ferie prese in questo giorno: %hours%</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>Hours of extra work done in this day: %hours%</source>
+                <target>Ore di straordinario svolte in questo giorno: %hours%</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>Day</source>
+                <target>Giorno</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>Hours</source>
+                <target>Ore uomo</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>Actions</source>
+                <target>Azioni</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>Overview</source>
+                <target>Riepilogo dati</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>Remove this extratime</source>
+                <target>Elimina questo straordinario</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>Extratime #%id% has been removed!</source>
+                <target>Lo straordinario #%id% è stato eliminato!</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

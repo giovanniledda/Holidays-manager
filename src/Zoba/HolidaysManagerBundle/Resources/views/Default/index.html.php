@@ -3,15 +3,45 @@
 
 <?php $view['slots']->set('title', 'Holidays Manager (beta)') ?>
 
-<?php $view['slots']->start('body') ?>
-<div class="hero-unit">
-    <h2>Totale ferie</h2>
-    <p>
-        Hai accumulato ferie per un totale di <?php echo round($holidays_days, 2); ?> giorni
-    </p>
-</div>
+<?php $view['slots']->start('main-widget') ?>
 
-<?php $view['slots']->stop('body') ?>
+<div class="widget">
 
-<?php $view['slots']->start('javascript_code'); ?>
-<?php $view['slots']->stop('javascript_code'); ?>
+    <div class="widget-header">
+        <i class="icon-file"></i>
+        <h3><?php echo $view['translator']->trans('Overview'); ?></h3>
+    </div> <!-- /widget-header -->
+
+    <div class="widget-content">
+        <div class="stats">
+
+            <div class="stat">
+                <span class="stat-value"><?php echo round($holiday_days_done / 8, 2); ?></span>									
+                Ferie svolte (gg)
+            </div> <!-- /stat -->
+
+            <div class="stat">
+                <span class="stat-value"><?php echo round($extra_hours, 2); ?></span>									
+                Straordinari (hh)
+            </div> <!-- /stat -->
+
+            <div class="stat">
+                <span class="stat-value"><?php echo round($extra_hours / 8, 2); ?></span>									
+                Straordinari (gg)
+            </div> <!-- /stat -->
+
+
+        </div> <!-- /stats -->
+
+        <div class="stats" id="chart-stats">
+
+            <div class="stat stat-time">
+                <span class="stat-value"><?php echo round($holidays_days, 2); ?></span>									
+                Ferie accumulate (gg)
+            </div> <!-- /stat -->
+
+        </div>
+    </div> <!-- /widget-content -->
+
+</div> <!-- /widget -->
+<?php $view['slots']->stop('main-widget') ?>
