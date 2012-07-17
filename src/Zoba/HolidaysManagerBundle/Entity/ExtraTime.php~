@@ -36,6 +36,11 @@ class ExtraTime {
     protected $description;
 
     /**
+     * @ORM\Column(type="boolean")
+     */
+    protected $is_holiday;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -97,5 +102,6 @@ class ExtraTime {
     public function getDescription() {
         return $this->description;
     }
+
 
 }

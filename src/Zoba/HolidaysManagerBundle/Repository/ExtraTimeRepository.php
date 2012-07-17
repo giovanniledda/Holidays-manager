@@ -19,4 +19,40 @@ class ExtraTimeRepository extends EntityRepository {
                         ->getQuery()
                         ->getResult();
     }
+
+    public function sumAllHours($holiday_day = null) {
+
+        $q = $this->createQueryBuilder('et')
+                ->select('sum(et.hours)');
+
+        if (!is_null($holiday_day)) {
+            $q->where('et.is_holiday = :is_holiday')
+                    ->setParameter('is_holiday', $holiday_day);
+        }
+        return $q->getQuery()->getSingleScalarResult();
+    }
+
+    public function sumAllExtratimeHours() {
+        return $this->sumAllHours(false);
+    }
+
+    public function sumAllHolidaysHours() {
+        return $this->sumAllHours(true);
+    }
+
+    public function removeAll() {
+
+        $em = $this->getEntityManager();
+        $extra_times = $this->findAll();
+        foreach ($extra_times as $et) {
+            $em->remove($et);
+        }
+        $em->flush();
+    }
+
+    public function calculateHolidays() {
+        $actual_extratime_hours = ($this->sumAllExtratimeHours() * 1.5) - $this->sumAllHolidaysHours();
+        return $actual_extratime_hours / 8;
+    }
+
 }

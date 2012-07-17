@@ -1,0 +1,3 @@
+ZobaUserBundle_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ZobaUserBundle:Default:index }

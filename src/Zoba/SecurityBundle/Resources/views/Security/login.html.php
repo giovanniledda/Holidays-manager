@@ -8,14 +8,14 @@
 <?php endif; ?>
 
 <form class="well form-vertical" action="<?php echo $view['router']->generate('login_check') ?>" method="post">
-    
+
     <div class="control-group">
         <label for="username">Username:</label>
         <div class="controls">
             <input type="text" id="username" name="_username" value="<?php echo $last_username ?>" />
         </div>
     </div>
-    
+
     <div class="control-group">
         <label for="password">Password:</label>
         <div class="controls">
@@ -29,7 +29,7 @@
     -->
 
     <div class="form-actions">
-        <input class="btn btn-primary" type="submit" name="login" />
+        <input class="btn btn-primary" type="submit" name="login" value="Invia"/>
     </div>
 </form>
 <?php $view['slots']->stop('body') ?>

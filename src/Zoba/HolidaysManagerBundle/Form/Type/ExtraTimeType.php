@@ -12,6 +12,7 @@ class ExtraTimeType extends AbstractType {
         $builder->add('date', null, array('widget' => 'single_text', 'format' => 'dd/MM/yyyy', 'label' => 'Giorno di lavoro extra'));
         $builder->add('hours', 'number', array('label' => 'Ore di straordinario'));
         $builder->add('description', 'textarea', array('label' => 'Attività svolta'));
+        $builder->add('is_holiday', 'checkbox', array('label' => 'Giorno di ferie?'));
     }
 
     public function getDefaultOptions(array $options) {

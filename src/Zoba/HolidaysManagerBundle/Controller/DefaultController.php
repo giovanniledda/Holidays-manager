@@ -16,7 +16,12 @@ class DefaultController extends Controller {
     /**
      */
     public function indexAction() {
-        return $this->render('ZobaHolidaysManagerBundle:Default:index.html.php');
+        
+        $holidays_days = $this->getDoctrine()
+                ->getRepository('ZobaHolidaysManagerBundle:ExtraTime')
+                ->calculateHolidays();
+        
+        return $this->render('ZobaHolidaysManagerBundle:Default:index.html.php', array('holidays_days' => $holidays_days));
     }
 
     /**
@@ -28,6 +33,7 @@ class DefaultController extends Controller {
         $extra_time->setDescription('Attività svolta...');
         $extra_time->setHours(0.0);
         $extra_time->setDate(new \DateTime('today'));
+        $extra_time->setIsHoliday(false);
 
         $form = $this->createForm(new ExtraTimeType(), $extra_time);
         
@@ -73,6 +79,17 @@ class DefaultController extends Controller {
                 ->findAll();
 
         return $this->render('ZobaHolidaysManagerBundle:Default:show-all.html.php', array('extra_times' => $extra_times));
+    }
+
+    /**
+     */
+    public function clearallAction() {
+
+        $extra_times = $this->getDoctrine()
+                ->getRepository('ZobaHolidaysManagerBundle:ExtraTime')
+                ->removeAll();
+
+        return $this->forward('ZobaHolidaysManagerBundle:Default:index');
     }
 
 }

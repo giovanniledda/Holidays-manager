@@ -3,7 +3,7 @@
 
 <?php $view['slots']->start('body'); ?>
 <?php //$view['form']->setTheme($form, array('TaskBundle:Form')) ?>
-<form class="well form-horizontal" action="<?php echo $view['router']->generate('create_extra_time') ?>" method="post" <?php echo $view['form']->enctype($form) ?> novalidate="novalidate">
+<form class="well form-vertical"  action="<?php echo $view['router']->generate('create_extra_time') ?>" method="post" <?php echo $view['form']->enctype($form) ?> novalidate="novalidate">
     <?php echo $view['form']->errors($form) ?>
 
     <div class="control-group <?php if ($view['form']->errors($form['description'])): ?>error<?php endif;?>">

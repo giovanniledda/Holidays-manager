@@ -10,6 +10,10 @@
                 <source>Show all Extratimes</source>
                 <target>Vedi tutti gli straordinari</target>
             </trans-unit>
+            <trans-unit id="3">
+                <source>Clear all Extratimes</source>
+                <target>Elimina tutti gli straordinari</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -1,0 +1,7 @@
+parameters:
+#    zoba_user.example.class: Zoba\UserBundle\Example
+
+services:
+#    zoba_user.example:
+#        class: %zoba_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

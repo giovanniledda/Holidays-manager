@@ -1,0 +1,1 @@
+<?php $view['slots']->start($slot_name) ?>class="active"<?php $view['slots']->stop($slot_name) ?>

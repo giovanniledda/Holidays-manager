@@ -1,3 +1,7 @@
+ZobaUserBundle:
+    resource: "@ZobaUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 ZobaHolidaysManagerBundle:
     resource: "@ZobaHolidaysManagerBundle/Resources/config/routing.yml"
     prefix:   /
