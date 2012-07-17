@@ -1,8 +1,8 @@
 <?php $view->extend('::base.html.php'); ?>
 <?php echo $view->render('::nav-list-class.html.php', array('slot_name' => 'nav-list-li-class-home')); ?>
-
-<?php $view['slots']->start('body'); ?>
-
+<?php echo $view->render('::notification.html.php'); ?>
+    
+<?php $view['slots']->start('main-widget'); ?>
 <div class="hero-unit">
     <?php echo $view->render('ZobaHolidaysManagerBundle:Default:extra_time-detail.html.php', array('extra_time' => $extra_time)); ?>
     <p>
@@ -11,5 +11,5 @@
         </a>
     </p>
 </div>
-<?php $view['slots']->stop('body'); ?>
+<?php $view['slots']->stop('main-widget'); ?>
 

@@ -1,7 +1,6 @@
 <?php $view->extend('::base.html.php') ?>
 
-
-<?php $view['slots']->start('body') ?>
+<?php $view['slots']->start('main-widget') ?>
 
 <?php if ($error): ?>
     <div><?php echo $error->getMessage() ?></div>
@@ -32,4 +31,4 @@
         <input class="btn btn-primary" type="submit" name="login" value="Invia"/>
     </div>
 </form>
-<?php $view['slots']->stop('body') ?>
+<?php $view['slots']->stop('main-widget') ?>

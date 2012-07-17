@@ -3,7 +3,7 @@
     <?php echo $view->render('::head.html.php'); ?>
     <body>
         <?php $view['slots']->output('notify') ?>
-        
+
         <?php echo $view->render('::navbar-profile.html.php'); ?>
         <?php echo $view->render('::subnavbar.html.php'); ?>
 
@@ -15,11 +15,11 @@
 
                     <div class="row">
 
-                        <?php if ($app->getUser()): ?>
-                            <div class="span6">
-                                <?php echo $view->render('::main-content.html.php'); ?>
-                            </div> <!-- /span6 -->
+                        <div class="span6">
+                            <?php echo $view->render('::main-content.html.php'); ?>
+                        </div> <!-- /span6 -->
 
+                        <?php if ($app->getUser()): ?>
                             <div class="span6">	
                                 <?php echo $view->render('::secundary-content.html.php'); ?>
                             </div> <!-- /span6 -->
