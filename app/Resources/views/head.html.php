@@ -31,3 +31,8 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
+<?php 
+$culture = $view['session']->getLocale();
+$c_C = strtolower($culture).'_'.strtoupper($culture);
+setlocale(LC_TIME, $c_C); 
+?>

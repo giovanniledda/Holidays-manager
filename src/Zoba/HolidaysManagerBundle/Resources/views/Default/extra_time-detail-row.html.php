@@ -1,7 +1,7 @@
 <?php $ts = $extra_time->getDate()->getTimestamp(); ?>
 <tr>
-    <td>#<?php echo $index . ' - ' . date('Y', $ts); ?></td>
-    <td><?php echo date('l - d F', $ts); ?></td>
+    <td>#<?php echo $index . ' - ' . strftime('%Y', $ts); ?></td>
+    <td><?php echo strftime('%A - %d %b %y', $ts); ?></td>
     <td><?php echo $view->escape($extra_time->getHours()); ?></td>
     <td class="td-actions">
         <a href="javascript:;" class="btn btn-small btn-warning">
