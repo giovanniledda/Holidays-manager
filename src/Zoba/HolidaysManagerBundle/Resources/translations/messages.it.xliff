@@ -62,6 +62,14 @@
                 <source>Last updates</source>
                 <target>Ultimi aggiornamenti</target>
             </trans-unit>
+            <trans-unit id="16">
+                <source>Add a new extratime!</source>
+                <target>Creane un altro!</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>View details</source>
+                <target>Vedi dettagli</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

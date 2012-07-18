@@ -15,15 +15,15 @@
 
                     <div class="row">
 
-                        <div class="span6">
-                            <?php echo $view->render('::main-content.html.php'); ?>
-                        </div> <!-- /span6 -->
-
                         <?php if ($app->getUser()): ?>
                             <div class="span6">	
                                 <?php echo $view->render('::secundary-content.html.php'); ?>
                             </div> <!-- /span6 -->
                         <?php endif; ?>
+
+                        <div class="span6">
+                            <?php echo $view->render('::main-content.html.php'); ?>
+                        </div> <!-- /span6 -->
 
                     </div> <!-- /row -->
 

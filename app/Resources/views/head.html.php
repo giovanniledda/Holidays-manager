@@ -2,8 +2,6 @@
     <title><?php $view['slots']->output('title', 'Holidays Manager (beta)'); ?></title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">   
 
     <link rel="shortcut icon" href="<?php echo $view['assets']->getUrl('favicon.ico'); ?>" />
 
@@ -20,8 +18,17 @@
     <link href="<?php echo $view['assets']->getUrl('notify/style/default.css') ?>" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="<?php echo $view['assets']->getUrl('jquery/js/jquery-1.7.2.min.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo $view['assets']->getUrl('bundles/zobaholidaysmanager/js/excanvas.min.js') ?>"></script>
     <script type="text/javascript" src="<?php echo $view['assets']->getUrl('jquery/js/jquery-ui-1.8.21.custom.min.js') ?>"></script>
     <script type="text/javascript" src="<?php echo $view['assets']->getUrl('bootstrap/js/bootstrap.min.js') ?>"></script>
+    
+<!--    <script type="text/javascript" src="<?php echo $view['assets']->getUrl('bundles/zobaholidaysmanager/js/jquery.flot.js') ?>"></script>-->
+<!--    <script type="text/javascript" src="<?php echo $view['assets']->getUrl('bundles/zobaholidaysmanager/js/jquery.flot.orderBars.js') ?>"></script>-->
+<!--    <script type="text/javascript" src="<?php echo $view['assets']->getUrl('bundles/zobaholidaysmanager/js/jquery.flot.pie.js') ?>"></script>-->
+<!--    <script type="text/javascript" src="<?php echo $view['assets']->getUrl('bundles/zobaholidaysmanager/js/jquery.flot.resize.js') ?>"></script>-->
+    
+<!--    <script type="text/javascript" src="<?php echo $view['assets']->getUrl('bundles/zobaholidaysmanager/js/base.js') ?>"></script>-->
+    
     <script type="text/javascript" src="<?php echo $view['assets']->getUrl('jrating/js/jRating.jquery.js') ?>"></script>
     <script type="text/javascript" src="<?php echo $view['assets']->getUrl('jnotify/js/jNotify.jquery.min.js') ?>"></script>
     <script type="text/javascript" src="<?php echo $view['assets']->getUrl('notify/js/notification.js') ?>"></script>

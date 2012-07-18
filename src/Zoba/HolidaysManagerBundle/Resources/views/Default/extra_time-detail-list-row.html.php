@@ -3,7 +3,7 @@ $ts = $extra_time->getDate()->getTimestamp();
 ?>
 <li>
     <div class="news-item-detail">										
-        <a href="javascript:;" class="news-item-title"><?php echo $view['translator']->trans('Extratime'); ?> #<?php echo $index . ' - ' . date('Y', $ts); ?></a>
+        <a href="<?php echo $view['router']->generate('show_extra_time', array('id' => $extra_time->getId())); ?>" class="news-item-title"><?php echo $view['translator']->trans('Extratime'); ?> #<?php echo $index . ' - ' . date('Y', $ts); ?></a>
         <p class="news-item-preview">
             <?php if ($extra_time->getIsHoliday()): ?>
                 <?php echo $view['translator']->trans('Hours of holidays done in this day: %hours%', array('%hours%' => $view->escape($extra_time->getHours()))); ?>

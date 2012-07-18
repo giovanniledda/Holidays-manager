@@ -3,8 +3,12 @@
 
 <?php $view['slots']->set('title', 'Holidays Manager (beta)') ?>
 
-<?php $view['slots']->start('main-widget') ?>
+<?php $view['slots']->start('more-recent-widget') ?>
+<?php echo $view['actions']->render('ZobaHolidaysManagerBundle:Default:showMoreRecent'); ?>
+<?php $view['slots']->stop('more-recent-widget') ?>
 
+
+<?php $view['slots']->start('main-widget') ?>
 <div class="widget">
 
     <div class="widget-header">

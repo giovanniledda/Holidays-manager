@@ -71,6 +71,11 @@ class DefaultController extends Controller {
                 ->getRepository('ZobaHolidaysManagerBundle:ExtraTime')
                 ->find($id);
 
+        if (!$extra_time) {
+            // Meglio un 404
+            return $this->redirect($this->generateUrl('homepage'));
+        }
+        
         return $this->render('ZobaHolidaysManagerBundle:Default:show.html.php', array('extra_time' => $extra_time));
     }
 
@@ -80,7 +85,7 @@ class DefaultController extends Controller {
 
         $extra_times = $this->getDoctrine()
                 ->getRepository('ZobaHolidaysManagerBundle:ExtraTime')
-                ->findAll();
+                ->findAllOrderedByDate('DESC');
 
         return $this->render('ZobaHolidaysManagerBundle:Default:show-all.html.php', array('extra_times' => $extra_times));
     }
@@ -104,11 +109,12 @@ class DefaultController extends Controller {
                 ->getRepository('ZobaHolidaysManagerBundle:ExtraTime')
                 ->find($id);
 
-//        $em = $this->getDoctrine()->getEntityManager();
-//        $em->remove($extra_time);
-//        $em->flush();
-
-        $this->get('session')->setFlash('notice', $this->get('translator')->trans('Extratime #%id% has been removed!', array('%id%' => $id)));
+        if ($extra_time) {
+            $em = $this->getDoctrine()->getEntityManager();
+            $em->remove($extra_time);
+            $em->flush();
+            $this->get('session')->setFlash('notice', $this->get('translator')->trans('Extratime #%id% has been removed!', array('%id%' => $id)));
+        }
 
         return $this->forward('ZobaHolidaysManagerBundle:Default:showAll');
     }
