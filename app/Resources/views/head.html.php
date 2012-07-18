@@ -26,7 +26,7 @@
     <script type="text/javascript" src="<?php echo $view['assets']->getUrl('jnotify/js/jNotify.jquery.min.js') ?>"></script>
     <script type="text/javascript" src="<?php echo $view['assets']->getUrl('notify/js/notification.js') ?>"></script>
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements  -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
