@@ -2,7 +2,7 @@
 
     <div class="widget-header">
         <i class="icon-list-alt"></i>
-        <h3><?php echo $view['translator']->trans('Extratimes list'); ?></h3>
+        <h3><?php echo $view['translator']->trans('Last updates'); ?></h3>
     </div> <!-- /widget-header -->
 
     <div class="widget-content">

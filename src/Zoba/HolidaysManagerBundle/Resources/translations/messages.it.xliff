@@ -58,6 +58,10 @@
                 <source>Extratime #%id% has been removed!</source>
                 <target>Lo straordinario #%id% è stato eliminato!</target>
             </trans-unit>
+            <trans-unit id="15">
+                <source>Last updates</source>
+                <target>Ultimi aggiornamenti</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
