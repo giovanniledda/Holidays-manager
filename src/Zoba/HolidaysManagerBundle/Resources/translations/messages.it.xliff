@@ -70,6 +70,10 @@
                 <source>View details</source>
                 <target>Vedi dettagli</target>
             </trans-unit>
+            <trans-unit id="18">
+                <source>Are you sure?</source>
+                <target>Sei sicuro?</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

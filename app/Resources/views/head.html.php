@@ -22,12 +22,12 @@
     <script type="text/javascript" src="<?php echo $view['assets']->getUrl('jquery/js/jquery-ui-1.8.21.custom.min.js') ?>"></script>
     <script type="text/javascript" src="<?php echo $view['assets']->getUrl('bootstrap/js/bootstrap.min.js') ?>"></script>
     
-<!--    <script type="text/javascript" src="<?php echo $view['assets']->getUrl('bundles/zobaholidaysmanager/js/jquery.flot.js') ?>"></script>-->
-<!--    <script type="text/javascript" src="<?php echo $view['assets']->getUrl('bundles/zobaholidaysmanager/js/jquery.flot.orderBars.js') ?>"></script>-->
-<!--    <script type="text/javascript" src="<?php echo $view['assets']->getUrl('bundles/zobaholidaysmanager/js/jquery.flot.pie.js') ?>"></script>-->
-<!--    <script type="text/javascript" src="<?php echo $view['assets']->getUrl('bundles/zobaholidaysmanager/js/jquery.flot.resize.js') ?>"></script>-->
+<!--    <script type="text/javascript" src="<?php //echo $view['assets']->getUrl('bundles/zobaholidaysmanager/js/jquery.flot.js') ?>"></script>-->
+<!--    <script type="text/javascript" src="<?php //echo $view['assets']->getUrl('bundles/zobaholidaysmanager/js/jquery.flot.orderBars.js') ?>"></script>-->
+<!--    <script type="text/javascript" src="<?php //echo $view['assets']->getUrl('bundles/zobaholidaysmanager/js/jquery.flot.pie.js') ?>"></script>-->
+<!--    <script type="text/javascript" src="<?php //echo $view['assets']->getUrl('bundles/zobaholidaysmanager/js/jquery.flot.resize.js') ?>"></script>-->
     
-<!--    <script type="text/javascript" src="<?php echo $view['assets']->getUrl('bundles/zobaholidaysmanager/js/base.js') ?>"></script>-->
+<!--    <script type="text/javascript" src="<?php //echo $view['assets']->getUrl('bundles/zobaholidaysmanager/js/base.js') ?>"></script>-->
     
     <script type="text/javascript" src="<?php echo $view['assets']->getUrl('jrating/js/jRating.jquery.js') ?>"></script>
     <script type="text/javascript" src="<?php echo $view['assets']->getUrl('jnotify/js/jNotify.jquery.min.js') ?>"></script>

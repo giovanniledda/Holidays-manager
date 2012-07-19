@@ -103,5 +103,22 @@ class ExtraTime {
         return $this->description;
     }
 
+    /**
+     * Set is_holiday
+     *
+     * @param boolean $is_holiday
+     */
+    public function setIsHoliday($is_holiday) {
+        $this->is_holiday = $is_holiday;
+    }
+
+    /**
+     * Get is_holiday
+     *
+     * @return boolean 
+     */
+    public function getIsHoliday() {
+        return $this->is_holiday;
+    }
 
 }

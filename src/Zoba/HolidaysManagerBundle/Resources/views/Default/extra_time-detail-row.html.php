@@ -8,7 +8,7 @@
             <i class="btn-icon-only icon-cog"></i>										
         </a>
 
-        <a href="<?php echo $view['router']->generate('remove_extra_time', array('id' => $extra_time->getId())); ?>" class="btn btn-small" title="<?php echo $view['translator']->trans('Remove this extratime'); ?>">
+        <a onclick="javascript: return confirm('<?php echo $view['translator']->trans('Are you sure?'); ?>');" href="<?php echo $view['router']->generate('remove_extra_time', array('id' => $extra_time->getId())); ?>" class="btn btn-small" title="<?php echo $view['translator']->trans('Remove this extratime'); ?>">
             <i class="btn-icon-only icon-remove"></i>										
         </a>
     </td>

@@ -82,16 +82,6 @@ LOCK TABLES `shipping` WRITE;
 UNLOCK TABLES;
 
 --
--- Dumping data for table `task`
---
-
-LOCK TABLES `task` WRITE;
-/*!40000 ALTER TABLE `task` DISABLE KEYS */;
-INSERT INTO `task` (`id`, `task`, `due_date`) VALUES (1,'Scrivere un post sul blog','2012-06-10'),(2,'Scrivere un post sul blog 2','2012-06-10'),(3,'Bo!!','2012-06-10'),(4,'Scrivere un post sul blog','2012-06-10'),(5,'Scrivere un post sul blog','2012-06-10');
-/*!40000 ALTER TABLE `task` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Dumping data for table `user_usergroup`
 --
 

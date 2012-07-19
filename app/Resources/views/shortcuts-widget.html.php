@@ -15,7 +15,7 @@
                 </span>
             </a>
 
-            <a href="<?php echo $view['router']->generate('clearall_extra_time'); ?>" class="shortcut">
+            <a onclick="javascript: return confirm('<?php echo $view['translator']->trans('Are you sure?'); ?>');" href="<?php echo $view['router']->generate('clearall_extra_time'); ?>" class="shortcut">
                 <i class="shortcut-icon icon-remove-circle"></i>
                 <span class="shortcut-label">
                     <?php echo $view['translator']->trans('Clear all Extratimes'); ?>
