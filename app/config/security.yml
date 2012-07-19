@@ -9,14 +9,14 @@ security:
       
   providers:
     chain_provider:
-      providers: [in_memory, user_db]
+      providers: [in_memory, user_db, fos_userbundle]
     in_memory:
       users:
         admin: { password: admin, roles: [ 'ROLE_ADMIN' ] }
     user_db:    
       entity: { class:  Zoba\UserBundle\Entity\User }
-#    fos_userbundle:
-#      entity: { class:  FOS\UserBundle\Entity\User }
+    fos_userbundle:
+      entity: { class:  FOS\UserBundle\Entity\User }
 
   role_hierarchy:
     ROLE_ADMIN:     ROLE_USER
