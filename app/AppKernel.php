@@ -18,7 +18,6 @@ class AppKernel extends Kernel {
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Zoba\StoreBundle\StoreBundle(),
-            new Zoba\SecurityBundle\ZobaSecurityBundle(),
             new Zoba\HolidaysManagerBundle\ZobaHolidaysManagerBundle(),
             new Zoba\UserBundle\ZobaUserBundle(),
         );

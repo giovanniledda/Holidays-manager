@@ -34,15 +34,15 @@ security:
 
     main:
       pattern:  ^/
-#      anonymous: ~
       form_login:
-#        provider: fos_userbundle
-#        csrf_provider: form.csrf_provider
         login_path: /login
         check_path: /login_check
+#        provider: fos_userbundle
+#        csrf_provider: form.csrf_provider
       logout:
         path:   /logout
         target: /holidays_index
+#      anonymous: ~
         
         
         

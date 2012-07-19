@@ -1,6 +1,6 @@
 <?php
 
-namespace Zoba\SecurityBundle\Controller;
+namespace Zoba\UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -22,7 +22,7 @@ class SecurityController extends Controller {
             $session->remove(SecurityContext::AUTHENTICATION_ERROR);
         }
 
-        return $this->render('ZobaSecurityBundle:Security:login.html.php', array(
+        return $this->render('ZobaUserBundle:Security:login.html.php', array(
                     // ultimo nome utente inserito
                     'last_username' => $session->get(SecurityContext::LAST_USERNAME),
                     'error' => $error,
