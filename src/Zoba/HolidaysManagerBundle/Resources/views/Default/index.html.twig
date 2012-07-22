@@ -1,0 +1,50 @@
+{% extends '::base.html.twig' %}
+{% render '::nav-list-class.html.twig' with { 'slot_name' : 'nav-list-li-class-home' } %}
+
+{% block title %}Holidays Manager (beta){% endblock %}
+
+{% block more_recent_widget %}
+{% render 'ZobaHolidaysManagerBundle:Default:showMoreRecent' %}
+{% endblock %}
+
+{% block main_widget %}
+<div class="widget">
+
+    <div class="widget-header">
+        <i class="icon-file"></i>
+        <h3>{% trans %}Overview{% endtrans %}</h3>
+    </div> <!-- /widget-header -->
+
+    <div class="widget-content">
+        <div class="stats">
+
+            <div class="stat">
+                <span class="stat-value">{{ holiday_days_done/8|format }}</span>
+                {% trans %}Holidays done (dd){% endtrans %}
+            </div> <!-- /stat -->
+
+            <div class="stat">
+                <span class="stat-value">{{ extra_hours|format }}</span>							
+                {% trans %}Extratimes (hh){% endtrans %}
+            </div> <!-- /stat -->
+
+            <div class="stat">
+                <span class="stat-value">{{ extra_hours/8|format }}</span>
+                {% trans %}Extratimes (dd){% endtrans %}
+            </div> <!-- /stat -->
+
+
+        </div> <!-- /stats -->
+
+        <div class="stats" id="chart-stats">
+
+            <div class="stat stat-time">
+                <span class="stat-value">{{ holidays_days|format }}</span>									
+                {% trans %}Holidays to do (dd){% endtrans %}
+            </div> <!-- /stat -->
+
+        </div>
+    </div> <!-- /widget-content -->
+
+</div> <!-- /widget -->
+{% endblock %}

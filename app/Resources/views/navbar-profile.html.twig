@@ -16,24 +16,23 @@
                 <ul class="nav pull-right">
 
                     <li class="dropdown">
-
-                        <?php if ($app->getUser()): ?>
+                        {% if app.user %}
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="icon-user"></i> 
-                                <?php echo $app->getUser()->getUsername(); ?>
+                                {{ app.user.username  }}
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Profile</a></li>
                                 <li class="divider"></li>
-                                <li><a href="<?php echo $view['router']->generate('logout'); ?>">Sign Out</a></li>
+                                <li><a href="{{ path('logout') }}">Sign Out</a></li>
                             </ul>
-                        <?php else: ?>
-                            <a href="<?php echo $view['router']->generate('login'); ?>" class="dropdown-toggle" data-toggle="dropdown">
+                        {% else %}
+                            <a href="{{ path('login') }}" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="icon-user"></i> Sign in
                                 <i class="icon-hand-left"></i>
                             </a>
-                        <?php endif; ?>
+                        {% endif %}
                     </li>
                 </ul>
 

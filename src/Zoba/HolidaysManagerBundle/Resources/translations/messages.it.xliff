@@ -74,6 +74,22 @@
                 <source>Are you sure?</source>
                 <target>Sei sicuro?</target>
             </trans-unit>
+            <trans-unit id="20">
+                <source>Holidays done (dd)</source>
+                <target>Ferie svolte (gg)</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>Extratimes (hh)</source>
+                <target>Straordinari (hh)</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>Extratimes (dd)</source>
+                <target>Straordinari (gg)</target>
+            </trans-unit>
+            <trans-unit id="23">
+                <source>Holidays to do (dd)</source>
+                <target>Ferie accumulate (gg)</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -29,7 +29,7 @@ class DefaultController extends Controller {
                 ->getRepository('ZobaHolidaysManagerBundle:ExtraTime')
                 ->calculateHolidays();
         
-        return $this->render('ZobaHolidaysManagerBundle:Default:index.html.php', array('holidays_days' => $holidays_days, 'holiday_days_done' => $holiday_days_done, 'extra_hours' => $extra_hours));
+        return $this->render('ZobaHolidaysManagerBundle:Default:index.html.twig', array('holidays_days' => $holidays_days, 'holiday_days_done' => $holiday_days_done, 'extra_hours' => $extra_hours));
     }
 
     /**
@@ -60,7 +60,7 @@ class DefaultController extends Controller {
             }
         }
 
-        return $this->render('ZobaHolidaysManagerBundle:Default:create.html.php', array('form' => $form->createView()));
+        return $this->render('ZobaHolidaysManagerBundle:Default:create.html.twig', array('form' => $form->createView()));
     }
 
     /**
@@ -76,7 +76,7 @@ class DefaultController extends Controller {
             return $this->redirect($this->generateUrl('homepage'));
         }
         
-        return $this->render('ZobaHolidaysManagerBundle:Default:show.html.php', array('extra_time' => $extra_time));
+        return $this->render('ZobaHolidaysManagerBundle:Default:show.html.twig', array('extra_time' => $extra_time));
     }
 
     /**
@@ -87,7 +87,7 @@ class DefaultController extends Controller {
                 ->getRepository('ZobaHolidaysManagerBundle:ExtraTime')
                 ->findAllOrderedByDate('DESC');
 
-        return $this->render('ZobaHolidaysManagerBundle:Default:show-all.html.php', array('extra_times' => $extra_times));
+        return $this->render('ZobaHolidaysManagerBundle:Default:show-all.html.twig', array('extra_times' => $extra_times));
     }
 
     /**
@@ -98,7 +98,7 @@ class DefaultController extends Controller {
                 ->getRepository('ZobaHolidaysManagerBundle:ExtraTime')
                 ->findAllOrderedByDate('DESC', 3);
 
-        return $this->render('ZobaHolidaysManagerBundle:Default:recent-items-widget.html.php', array('extra_times' => $extra_times));
+        return $this->render('ZobaHolidaysManagerBundle:Default:recent-items-widget.html.twig', array('extra_times' => $extra_times));
     }
 
     /**

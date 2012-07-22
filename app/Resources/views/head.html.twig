@@ -1,0 +1,36 @@
+<head>
+    <title>{% block title %} Holidays Manager (beta) {% endblock %}</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+
+    <link href="{{ asset('bootstrap/css/bootstrap-wrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bootstrap/css/bootstrap-responsive-wrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet"/>
+    <link href="{{ asset('font-awesome/css/font-awesome.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/zobaholidaysmanager/css/base-admin.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/zobaholidaysmanager/css/base-admin-responsive.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/zobaholidaysmanager/css/pages/dashboard.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('jquery/css/south-street/jquery-ui-1.8.21.custom.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('jrating/css/jRating.jquery.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('jnotify/css/jNotify.jquery.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('notify/style/default.css') }}" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="{{ asset('jquery/js/jquery-1.7.2.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/zobaholidaysmanager/js/excanvas.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('jquery/js/jquery-ui-1.8.21.custom.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+    
+    <script type="text/javascript" src="{{ asset('jrating/js/jRating.jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('jnotify/js/jNotify.jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('notify/js/notification.js') }}"></script>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements  -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+{% set culture = app.session.locale %}
+{% set c_C = [culture|lower, culture|upper]|join('_') %}

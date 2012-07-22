@@ -1,0 +1,18 @@
+<div class="widget widget-nopad">
+
+    <div class="widget-header">
+        <i class="icon-list-alt"></i>
+        <h3>{% trans %}Last updates{% endtrans %}</h3>
+    </div> <!-- /widget-header -->
+
+    <div class="widget-content">
+
+        <ul class="news-items">
+            {% for extra_time in extra_times %}
+              {% render 'ZobaHolidaysManagerBundle:Default:extra_time-detail-list-row.html.twig' with {'extra_time' => extra_time, 'index' => loop.index} %}
+            {% endfor %}
+        </ul>
+
+    </div> <!-- /widget-content -->
+
+</div> <!-- /widget -->

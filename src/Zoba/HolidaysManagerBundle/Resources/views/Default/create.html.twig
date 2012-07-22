@@ -1,0 +1,66 @@
+{% extends '::base.html.twig' %}
+{% render '::nav-list-class.html.twig' with { 'slot_name' : 'nav-list-li-class-create' } %}
+
+{% block main_widget %}
+
+<div class="widget">
+
+    <div class="widget-header">
+        <i class="icon-plus-sign"></i>
+        <h3>{% trans %}New extratime{% endtrans %}</h3>
+    </div> <!-- /widget-header -->
+
+    <div class="widget-content">
+        <form class="well form-vertical"  action="{{ path('create_extra_time') }}" method="post" {{ form_ectype(form) }} novalidate="novalidate">
+
+            {{ form_errors(form) }}
+            
+            <div class="control-group {% if form_errors(form.description) %}error{% endif %}">
+                {% form_label(form.description, 'Descripion', { 'attr' : { 'class' : 'control-label' } }) %}
+                {% form_errors(form.description, { 'attr' : { 'class' : 'help-inline' } }) %}
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-tasks"></i></span>
+                        {% form_widget(form.description, { 'attr' : { 'class' : 'extra_time_field' } }) %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-group <?php if ($view['form']->errors($form['date'])): ?>error<?php endif; ?>">
+                {% form_label(form.date, 'Date', { 'attr' : { 'class' : 'control-label' } }) %}
+                {% form_errors(form.date) %}
+                <div class="controls">
+                    {% form_widget(form.date) %}
+                </div>
+            </div>
+
+            {% form_rest(form) %}
+
+            <div class="form-actions">
+                <input class="btn btn-primary" type="submit" value="Invia"/>
+                <button class="btn">Cancel</button>
+            </div>
+        </form>
+    </div> <!-- /widget-content -->
+
+</div> <!-- /widget -->
+{% endblock %}
+
+{% block javascript_code %}
+<script type="text/javascript" >
+    function convertErrorsMarkup() {
+            
+        errors = $('.control-group li');
+        $.each(errors, function () {
+            msg = $(this).html();
+            $(this).parent().next('.controls').append('<span class="help-inline">' + msg + '</span>');
+        });
+        $('.control-group ul').detach();
+    }
+        
+    $(document).ready(function (){
+        $('#extra_time_date').datepicker({ dateFormat: "dd/mm/yy" });
+        convertErrorsMarkup();
+    });
+</script>
+{% endblock %}

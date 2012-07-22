@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    {% include '::head.html.twig' %}
+    <body>
+        {% block notify %}{% endblock %}
+
+        {% include '::navbar-profile.html.twig' %}
+        {% include '::subnavbar.html.twig' %}
+
+        <div class="main">
+
+            <div class="main-inner">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        {% if app.user %}
+                            {% include '::subnavbar.html.twig' %}
+                            <div class="span6">	
+                                {% include '::secundary-content.html.twig' %}
+                            </div> <!-- /span6 -->
+                        {% endif %}
+
+                        <div class="span6">
+                            {% include '::main-content.html.twig' %}
+                        </div> <!-- /span6 -->
+
+                    </div> <!-- /row -->
+
+                </div> <!-- /container -->
+
+            </div> <!-- /main-inner -->
+
+        </div> <!-- /main -->
+
+        {% include '::extra-footer.html.twig' %}
+        {% include '::footer.html.twig' %}
+
+        {% block javascript_code %}{% endblock %}
+    </body>
+
+</html>
+
+

@@ -2,23 +2,23 @@
 
     <div class="widget-header">
         <i class="icon-bookmark"></i>
-        <h3><?php echo $view['translator']->trans('Quick Shortcuts'); ?></h3>
+        <h3>{% trans %}Quick Shortcuts{% endtrans %}</h3>
     </div> <!-- /widget-header -->
 
     <div class="widget-content">
 
         <div class="shortcuts">
-            <a href="<?php echo $view['router']->generate('create_extra_time'); ?>" class="shortcut">
+            <a href="{{ path('create_extra_time') }}" class="shortcut">
                 <i class="shortcut-icon icon-plus-sign"></i>
                 <span class="shortcut-label">
-                    <?php echo $view['translator']->trans('Add an Extratime'); ?>
+                    {% trans %}Add an Extratime{% endtrans %}
                 </span>
             </a>
 
-            <a onclick="javascript: return confirm('<?php echo $view['translator']->trans('Are you sure?'); ?>');" href="<?php echo $view['router']->generate('clearall_extra_time'); ?>" class="shortcut">
+            <a onclick="javascript: return confirm('{% trans %}Are you sure?{% endtrans %}');" href="{{ path('clearall_extra_time') }}" class="shortcut">
                 <i class="shortcut-icon icon-remove-circle"></i>
                 <span class="shortcut-label">
-                    <?php echo $view['translator']->trans('Clear all Extratimes'); ?>
+                    {% trans %}Clear all Extratimes{% endtrans %}
                 </span>	
             </a>
         </div> <!-- /shortcuts -->	

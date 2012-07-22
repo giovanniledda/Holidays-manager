@@ -1,17 +1,17 @@
-<?php $view->extend('::base.html.php') ?>
+{% extends '::base.html.twig' %}
 
-<?php $view['slots']->start('main-widget') ?>
+{% block main_widget %}
 
-<?php if ($error): ?>
-    <div><?php echo $error->getMessage() ?></div>
-<?php endif; ?>
+{% if error %}
+    <div>{{ error.message }}</div>
+{% endif %}
 
-<form class="well form-vertical" action="<?php echo $view['router']->generate('login_check') ?>" method="post">
+<form class="well form-vertical" action="{{ path('login_check') }}" method="post">
 
     <div class="control-group">
         <label for="username">Username:</label>
         <div class="controls">
-            <input type="text" id="username" name="_username" value="<?php echo $last_username ?>" />
+            <input type="text" id="username" name="_username" value="{{ last_username }}" />
         </div>
     </div>
 
@@ -31,4 +31,4 @@
         <input class="btn btn-primary" type="submit" name="login" value="Invia"/>
     </div>
 </form>
-<?php $view['slots']->stop('main-widget') ?>
+{% endblock %}

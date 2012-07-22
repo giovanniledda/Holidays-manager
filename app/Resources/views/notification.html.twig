@@ -1,0 +1,21 @@
+{% if app.session.hasFlash('notice') %}
+
+    {% block notify %}
+    <div class="notification sticky hide">
+        <p>
+            {{ app.session.flash('notice') }}
+        </p>
+        <a class="close" href="javascript:">
+            <img src="{{ asset('notify/images/icon-close.png') }}" />
+        </a>
+    </div>
+    {% endblock %}
+
+    {% block 'javascript_code' %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.notification.sticky').notify();
+        });
+    </script>
+    {% endblock %}
+{% endif %}

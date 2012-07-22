@@ -1,0 +1,7 @@
+{% if errors %}
+    {% for error in errors %}
+        <span class="help-inline">
+            {{ error }}
+        </span> 
+    {% endfor %}
+{% endif %}

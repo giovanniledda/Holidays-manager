@@ -22,7 +22,7 @@ class SecurityController extends Controller {
             $session->remove(SecurityContext::AUTHENTICATION_ERROR);
         }
 
-        return $this->render('ZobaUserBundle:Security:login.html.php', array(
+        return $this->render('ZobaUserBundle:Security:login.html.twig', array(
                     // ultimo nome utente inserito
                     'last_username' => $session->get(SecurityContext::LAST_USERNAME),
                     'error' => $error,
