@@ -42,7 +42,7 @@ security:
       logout:
         path:   /logout
         target: /holidays_index
-#      anonymous: ~
+      anonymous: ~
         
         
         

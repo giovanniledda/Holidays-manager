@@ -14,7 +14,6 @@ framework:
     templating:      
       engines: #assets_version: SomeVersionScheme
         - 'twig'
-        - 'php' 
 #      form:
 #        resources:
 #          - 'TaskBundle:Form'

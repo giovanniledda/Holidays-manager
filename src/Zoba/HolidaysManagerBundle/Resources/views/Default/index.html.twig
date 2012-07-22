@@ -1,13 +1,14 @@
 {% extends '::base.html.twig' %}
-{% render '::nav-list-class.html.twig' with { 'slot_name' : 'nav-list-li-class-home' } %}
+
+{% block main_widget %}
+
+{% block more_recent_widget %}
+  {% render 'ZobaHolidaysManagerBundle:Default:showMoreRecent' %}
+{% endblock %}
 
 {% block title %}Holidays Manager (beta){% endblock %}
 
-{% block more_recent_widget %}
-{% render 'ZobaHolidaysManagerBundle:Default:showMoreRecent' %}
-{% endblock %}
-
-{% block main_widget %}
+{% include '::nav-list-class.html.twig' with { 'slot_name' : 'nav-list-li-class-home' } %}
 <div class="widget">
 
     <div class="widget-header">
