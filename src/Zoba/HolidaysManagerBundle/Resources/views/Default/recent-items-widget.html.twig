@@ -9,7 +9,7 @@
 
         <ul class="news-items">
             {% for extra_time in extra_times %}
-              {% render 'ZobaHolidaysManagerBundle:Default:extra_time-detail-list-row.html.twig' with {'extra_time' => extra_time, 'index' => loop.index} %}
+              {% include 'ZobaHolidaysManagerBundle:Default:extra_time-detail-list-row.html.twig' with {'extra_time' : extra_time, 'index' : loop.index} %}
             {% endfor %}
         </ul>
 

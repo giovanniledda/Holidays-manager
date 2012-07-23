@@ -116,7 +116,7 @@ class DefaultController extends Controller {
             $this->get('session')->setFlash('notice', $this->get('translator')->trans('Extratime #%id% has been removed!', array('%id%' => $id)));
         }
 
-        return $this->forward('ZobaHolidaysManagerBundle:Default:showAll');
+        return $this->redirect($this->generateUrl('showall_extra_time'));
     }
 
     /**

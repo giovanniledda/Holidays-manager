@@ -1,12 +1,12 @@
 {% set ts = extra_time.date.timestamp %}
 <li>
     <div class="news-item-detail">										
-        <a href="{{ path('show_extra_time', {'id': extratime.id}) }}" class="news-item-title">
-            {% trans %}Extratime{% endtrans %} #{{ [index, ts|date('Y', 'Europe/Rome')]|join(' - ') }}
+        <a href="{{ path('show_extra_time', {'id': extra_time.id}) }}" class="news-item-title">
+            {% trans %}Extratime{% endtrans %} {{ "#%s - %s."|format(extra_time.id, ts|date('Y', 'Europe/Rome')) }}
         </a>
         
         <p class="news-item-preview">
-            {% if extra_time.is_holiday %}
+            {% if extra_time.getIsHoliday %}
                 {% trans with {'%hours%' : extra_time.hours} %}Hours of holidays done in this day: %hours%'{% endtrans %}
             {% else %}    
                 {% trans with {'%hours%' : extra_time.hours} %}Hours of extra work done in this day: %hours%'{% endtrans %}
@@ -16,7 +16,7 @@
 
     <div class="news-item-date">
         <span class="news-item-day">{{ ts|date('d') }}</span>
-        <span class="news-item-month">{{ ts|date('A') }}</span>
-        <span class="news-item-year">{{ ts|date('B - Y') }}</span>
+        <span class="news-item-month">{{ ts|date('D') }}</span>
+        <span class="news-item-year">{{ ts|date('F - Y') }}</span>
     </div>
 </li>

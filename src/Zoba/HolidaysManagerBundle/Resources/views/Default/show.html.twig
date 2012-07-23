@@ -1,12 +1,10 @@
 {% extends '::base.html.twig' %}
+{% block title %}Holidays manager{% endblock %}
 
 {% block main_widget %}
-{% render '::nav-list-class.html.twig' with { 'slot_name' : 'nav-list-li-class-home' } %}
+{% block nav_list_li_class_home %}class="active"{% endblock %}
 
-{% block title %}Holidays manager{% endblock %}
-{% block section_title %}{% trans %}Extratime detail{% endtrans %}{% endblock %}
-
-{% render '::notification.html.twig' %}
+{% include '::notification.html.twig' %}
 <div class="widget">
     <div class="widget-header">
         <i class="icon-eye-open"></i>
@@ -15,7 +13,7 @@
 
     <div class="widget-content">
         <div class="hero-unit">
-            {% render 'ZobaHolidaysManagerBundle:Default:extra_time-detail-list-row.html.twig' with {'extra_time' : extra_time, 'index' : 1} %}
+            {% include 'ZobaHolidaysManagerBundle:Default:extra_time-detail-list-row.html.twig' with {'extra_time' : extra_time} %}
             <p>
                 <a class="btn btn-primary btn-large" href="{{ path('create_extra_time') }}">
                     {% trans %}Add a new extratime!{% endtrans %}

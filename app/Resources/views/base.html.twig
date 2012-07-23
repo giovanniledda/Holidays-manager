@@ -16,14 +16,14 @@
                     <div class="row">
 
                         {% if app.user %}
-                            {% include '::subnavbar.html.twig' %}
                             <div class="span6">	
-                                {% include '::secundary-content.html.twig' %}
+                                {% include '::shortcut-menu.html.twig' %}
                             </div> <!-- /span6 -->
                         {% endif %}
 
                         <div class="span6">
-                            {% include '::main-content.html.twig' %}
+                            {% block main_widget %}{% endblock %}
+                            {% block more_recent_widget %}{% endblock %}
                         </div> <!-- /span6 -->
 
                     </div> <!-- /row -->

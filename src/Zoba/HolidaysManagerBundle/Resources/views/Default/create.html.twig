@@ -1,5 +1,5 @@
 {% extends '::base.html.twig' %}
-{% render '::nav-list-class.html.twig' with { 'slot_name' : 'nav-list-li-class-create' } %}
+{% block nav_list_li_class_home %}class="active"{% endblock %}
 
 {% block main_widget %}
 
@@ -11,30 +11,30 @@
     </div> <!-- /widget-header -->
 
     <div class="widget-content">
-        <form class="well form-vertical"  action="{{ path('create_extra_time') }}" method="post" {{ form_ectype(form) }} novalidate="novalidate">
+        <form class="well form-vertical"  action="{{ path('create_extra_time') }}" method="post" {{ form_enctype(form) }} novalidate="novalidate">
 
             {{ form_errors(form) }}
             
             <div class="control-group {% if form_errors(form.description) %}error{% endif %}">
-                {% form_label(form.description, 'Descripion', { 'attr' : { 'class' : 'control-label' } }) %}
-                {% form_errors(form.description, { 'attr' : { 'class' : 'help-inline' } }) %}
+                {{ form_label(form.description, 'Descripion', { 'attr' : { 'class' : 'control-label' } }) }}
+                {{ form_errors(form.description, { 'attr' : { 'class' : 'help-inline' } }) }}
                 <div class="controls">
                     <div class="input-prepend">
                         <span class="add-on"><i class="icon-tasks"></i></span>
-                        {% form_widget(form.description, { 'attr' : { 'class' : 'extra_time_field' } }) %}
+                        {{ form_widget(form.description, { 'attr' : { 'class' : 'extra_time_field' } }) }}
                     </div>
                 </div>
             </div>
 
-            <div class="control-group <?php if ($view['form']->errors($form['date'])): ?>error<?php endif; ?>">
-                {% form_label(form.date, 'Date', { 'attr' : { 'class' : 'control-label' } }) %}
-                {% form_errors(form.date) %}
+            <div class="control-group {% if form_errors(form.date) %}error{% endif %}">
+                {{ form_label(form.date, 'Date', { 'attr' : { 'class' : 'control-label' } }) }}
+                {{ form_errors(form.date) }}
                 <div class="controls">
-                    {% form_widget(form.date) %}
+                    {{ form_widget(form.date) }}
                 </div>
             </div>
 
-            {% form_rest(form) %}
+            {{ form_rest(form) }}
 
             <div class="form-actions">
                 <input class="btn btn-primary" type="submit" value="Invia"/>

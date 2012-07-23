@@ -1,14 +1,12 @@
 {% extends '::base.html.twig' %}
+{% block nav_list_li_class_show_all %}class="active"{% endblock %}
+
+{% block title %}Holidays manager - {% trans %}Extratimes list{% endtrans %}{% endblock %}
 
 {% block main_widget %}
-{% include '::nav-list-class.html.twig' with { 'slot_name' : 'nav-list-li-class-show-all' } %}
-
-{% block title %}Holidays manager{% endblock %}
-{% block section_title %}Elenco straordinari{% endblock %}
 
 {% include '::notification.html.twig' %}
 <div class="widget widget-table action-table">
-
 
     <div class="widget-header">
         <i class="icon-th-list"></i>
@@ -21,15 +19,15 @@
         <table class="table table-striped table-bordered">
             <thead>
                 <tr>
-                    <th>{% trans %}Extratime{% endtrans %}</th>
                     <th>{% trans %}Day{% endtrans %}</th>
+                    <th>{% trans %}Extratime{% endtrans %}</th>
                     <th>{% trans %}Hours{% endtrans %}</th>
                     <th class="td-actions">{% trans %}Actions{% endtrans %}</th>
                 </tr>
             </thead>
             <tbody>
                 {% for extra_time in extra_times %}
-                  {% render 'ZobaHolidaysManagerBundle:Default:extra_time-detail-row.html.html.twig' with {'extra_time' : extra_time, 'index' : loop.index} %}
+                  {% include 'ZobaHolidaysManagerBundle:Default:extra_time-detail-row.html.twig' with {'extra_time' : extra_time} %}
                 {% endfor %}
             </tbody>
         </table>

@@ -1,14 +1,14 @@
 {% set ts = extra_time.date.timestamp %}
 <tr>
-    <td>{{ "#%s - %s."|format(index, ts|date('Y', 'Europe/Rome')) }}</td>
-    <td>{{ ts|date(A - d b y) }}</td>
+    <td>{{ ts|date('Y: l - d/m') }}</td>
+    <td>{{ "#%s - %s."|format(extra_time.id, extra_time.description) }}</td>
     <td>{{ extra_time.hours }}</td>
     <td class="td-actions">
-        <a href="{{ path('show_extra_time', {'id': extratime.id}) }}" class="btn btn-small btn-warning" title="{% trans %}View details{% endtrans %}">
+        <a href="{{ path('show_extra_time', {'id': extra_time.id}) }}" class="btn btn-small btn-warning" title="{% trans %}View details{% endtrans %}">
             <i class="btn-icon-only icon-cog"></i>										
         </a>
 
-        <a onclick="javascript: return confirm('{% trans %}Are you sure?{% endtrans %}');" href="{{ path('remove_extra_time', {'id': extratime.id}) }}" class="btn btn-small" title="{% trans %}Remove this extratime{% endtrans %}">
+        <a onclick="javascript: return confirm('{% trans %}Are you sure?{% endtrans %}');" href="{{ path('remove_extra_time', {'id': extra_time.id}) }}" class="btn btn-small" title="{% trans %}Remove this extratime{% endtrans %}">
             <i class="btn-icon-only icon-remove"></i>										
         </a>
     </td>
