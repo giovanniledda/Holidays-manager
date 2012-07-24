@@ -6,6 +6,10 @@ create_extra_time:
   pattern:  /create_extra_time
   defaults: { _controller: ZobaHolidaysManagerBundle:Default:create }
 
+update_extra_time:
+  pattern:  /update_extra_time/{id}
+  defaults: { _controller: ZobaHolidaysManagerBundle:Default:create }
+
 show_extra_time:
   pattern:  /extra_time/{id}
   defaults: { _controller: ZobaHolidaysManagerBundle:Default:show }

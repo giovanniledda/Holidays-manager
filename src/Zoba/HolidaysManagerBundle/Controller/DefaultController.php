@@ -34,14 +34,19 @@ class DefaultController extends Controller {
 
     /**
      */
-    public function createAction(Request $request) {
+    public function createAction(Request $request, $id = null) {
         
         // crea un extra_time fornendo alcuni dati fittizi per questo esempio
-        $extra_time = new ExtraTime();
-        $extra_time->setDescription('Attività svolta...');
-        $extra_time->setHours(0.0);
-        $extra_time->setDate(new \DateTime('today'));
-        $extra_time->setIsHoliday(false);
+        
+        if ($id) {
+            $extra_time = $this->getDoctrine()->getRepository('ZobaHolidaysManagerBundle:ExtraTime')->find($id);
+        } else {
+            $extra_time = new ExtraTime();
+            $extra_time->setDescription('Attività svolta...');
+            $extra_time->setHours(0.0);
+            $extra_time->setDate(new \DateTime('today'));
+            $extra_time->setIsHoliday(false);
+        }
 
         $form = $this->createForm(new ExtraTimeType(), $extra_time);
         
@@ -60,7 +65,7 @@ class DefaultController extends Controller {
             }
         }
 
-        return $this->render('ZobaHolidaysManagerBundle:Default:create.html.twig', array('form' => $form->createView()));
+        return $this->render('ZobaHolidaysManagerBundle:Default:extra_time-form.html.twig', array('form' => $form->createView()));
     }
 
     /**

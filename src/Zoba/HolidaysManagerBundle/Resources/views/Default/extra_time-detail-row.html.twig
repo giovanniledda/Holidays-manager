@@ -4,7 +4,7 @@
     <td>{{ "#%s - %s."|format(extra_time.id, extra_time.description) }}</td>
     <td>{{ extra_time.hours }}</td>
     <td class="td-actions">
-        <a href="{{ path('show_extra_time', {'id': extra_time.id}) }}" class="btn btn-small btn-warning" title="{% trans %}View details{% endtrans %}">
+        <a href="{{ path('update_extra_time', {'id': extra_time.id}) }}" class="btn btn-small btn-warning" title="{% trans %}View details{% endtrans %}">
             <i class="btn-icon-only icon-cog"></i>										
         </a>
 
