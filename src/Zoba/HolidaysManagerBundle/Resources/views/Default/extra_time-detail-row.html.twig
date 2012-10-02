@@ -1,5 +1,5 @@
 {% set ts = extra_time.date.timestamp %}
-<tr>
+<tr {% if extra_time.getIsHoliday %}class="holiday"{% endif %}>
     <td>{{ ts|date('Y: l - d/m') }}</td>
     <td>{{ "#%s - %s."|format(extra_time.id, extra_time.description) }}</td>
     <td>{{ extra_time.hours }}</td>
