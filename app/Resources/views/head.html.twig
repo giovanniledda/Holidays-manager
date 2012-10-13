@@ -32,5 +32,5 @@
     <![endif]-->
 </head>
 
-{% set culture = app.session.locale %}
+{% set culture = app.request.locale %}
 {% set c_C = [culture|lower, culture|upper]|join('_') %}

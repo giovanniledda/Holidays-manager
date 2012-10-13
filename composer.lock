@@ -1,5 +1,5 @@
 {
-    "hash": "6f0cd88e7a3895f9791ed2e6ab91c1c4",
+    "hash": "600a7895c7a85fc70b95d06cd7797210",
     "packages": [
         {
             "name": "doctrine/common",
@@ -18,7 +18,6 @@
             "require": {
                 "php": ">=5.3.2"
             },
-            "time": "1348120518",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -67,7 +66,8 @@
                 "eventmanager",
                 "annotations",
                 "persistence"
-            ]
+            ],
+            "time": "1348120518"
         },
         {
             "name": "doctrine/dbal",
@@ -87,7 +87,6 @@
                 "php": ">=5.3.2",
                 "doctrine/common": "2.3.*"
             },
-            "time": "1348120597",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -129,7 +128,8 @@
                 "persistence",
                 "dbal",
                 "queryobject"
-            ]
+            ],
+            "time": "1348120597"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -160,7 +160,6 @@
             "suggest": {
                 "doctrine/orm": "The Doctrine ORM integration is optional in the bundle."
             },
-            "time": "1348828243",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -197,7 +196,8 @@
                 "orm",
                 "persistence",
                 "dbal"
-            ]
+            ],
+            "time": "1348828243"
         },
         {
             "name": "doctrine/orm",
@@ -222,7 +222,6 @@
             "suggest": {
                 "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
             },
-            "time": "1348121015",
             "bin": [
                 "bin/doctrine",
                 "bin/doctrine.php"
@@ -266,6 +265,77 @@
             "keywords": [
                 "database",
                 "orm"
+            ],
+            "time": "1348121015"
+        },
+        {
+            "name": "friendsofsymfony/user-bundle",
+            "version": "dev-master",
+            "target-dir": "FOS/UserBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle",
+                "reference": "127391cd83e86bcf97e5d861aac1e39c14d3999d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle/zipball/127391cd83e86bcf97e5d861aac1e39c14d3999d",
+                "reference": "127391cd83e86bcf97e5d861aac1e39c14d3999d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": ">=2.1,<2.3-dev",
+                "symfony/security-bundle": ">=2.1,<2.3-dev"
+            },
+            "require-dev": {
+                "twig/twig": "*",
+                "doctrine/doctrine-bundle": "*",
+                "swiftmailer/swiftmailer": "*",
+                "willdurand/propel-typehintable-behavior": "dev-master",
+                "symfony/validator": "2.1.*",
+                "symfony/yaml": "2.1.*"
+            },
+            "suggest": {
+                "doctrine/couchdb-odm-bundle": "*",
+                "doctrine/doctrine-bundle": "*",
+                "doctrine/mongodb-odm-bundle": "*"
+            },
+            "time": "1350050664",
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "FOS\\UserBundle": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                },
+                {
+                    "name": "Thibault Duplessis",
+                    "email": "thibault.duplessis@gmail.com",
+                    "homepage": "http://ornicar.github.com"
+                },
+                {
+                    "name": "FriendsOfSymfony Community",
+                    "homepage": "https://github.com/friendsofsymfony/FOSUserBundle/contributors"
+                }
+            ],
+            "description": "Symfony FOSUserBundle",
+            "homepage": "http://friendsofsymfony.github.com",
+            "keywords": [
+                "User management"
             ]
         },
         {
@@ -287,7 +357,6 @@
                 "symfony/framework-bundle": "2.*",
                 "jms/cg": "1.0.0"
             },
-            "time": "1348045406",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -315,7 +384,8 @@
             "keywords": [
                 "annotations",
                 "aop"
-            ]
+            ],
+            "time": "1348045406"
         },
         {
             "name": "jms/cg",
@@ -393,7 +463,6 @@
                 "doctrine/doctrine-bundle": "*",
                 "doctrine/orm": "*"
             },
-            "time": "1348217858",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -422,7 +491,8 @@
             "keywords": [
                 "dependency injection",
                 "annotations"
-            ]
+            ],
+            "time": "1348217858"
         },
         {
             "name": "jms/metadata",
@@ -504,7 +574,6 @@
                 "symfony/form": "*",
                 "symfony/validator": "*"
             },
-            "time": "1348046640",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -536,7 +605,8 @@
                 "security",
                 "secure",
                 "expression"
-            ]
+            ],
+            "time": "1348046640"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -570,7 +640,6 @@
                 "ptachoire/cssembed": "Assetic provides the integration with phpcssembed to embed data uris",
                 "leafo/scssphp-compass": "Assetic provides the integration with the SCSS compass plugin"
             },
-            "time": "1347622188",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -602,7 +671,8 @@
                 "assets",
                 "compression",
                 "minification"
-            ]
+            ],
+            "time": "1347622188"
         },
         {
             "name": "monolog/monolog",
@@ -629,7 +699,6 @@
                 "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
                 "ext-mongo": "Allow sending log messages to a MongoDB server"
             },
-            "time": "1347983448",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -658,7 +727,8 @@
             "keywords": [
                 "log",
                 "logging"
-            ]
+            ],
+            "time": "1347983448"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -678,7 +748,6 @@
             "require": {
                 "symfony/framework-bundle": "2.2.*"
             },
-            "time": "1347635342",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -704,7 +773,8 @@
             "keywords": [
                 "distribution",
                 "configuration"
-            ]
+            ],
+            "time": "1347635342"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -725,7 +795,6 @@
                 "doctrine/common": ">=2.1,<2.4-dev",
                 "symfony/framework-bundle": "2.2.*"
             },
-            "time": "1347340790",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -751,7 +820,8 @@
             "keywords": [
                 "annotations",
                 "controllers"
-            ]
+            ],
+            "time": "1347340790"
         },
         {
             "name": "sensio/generator-bundle",
@@ -780,7 +850,6 @@
             "suggest": {
                 "doctrine/doctrine-bundle": "to generate entities and their crud controller"
             },
-            "time": "1348070473",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -802,7 +871,8 @@
                     "email": "fabien@symfony.com"
                 }
             ],
-            "description": "This bundle generates code for you"
+            "description": "This bundle generates code for you",
+            "time": "1348070473"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -821,7 +891,6 @@
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "1348747908",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -851,7 +920,8 @@
             "keywords": [
                 "mail",
                 "mailer"
-            ]
+            ],
+            "time": "1348747908"
         },
         {
             "name": "symfony/assetic-bundle",
@@ -885,7 +955,6 @@
             "suggest": {
                 "symfony/twig-bundle": ">=2.1.0,<2.3-dev"
             },
-            "time": "1348938560",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -914,7 +983,8 @@
                 "assets",
                 "compression",
                 "minification"
-            ]
+            ],
+            "time": "1348938560"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -942,7 +1012,6 @@
                 "symfony/yaml": ">=2.1.0,<2.3-dev",
                 "symfony/config": ">=2.1.0,<2.3-dev"
             },
-            "time": "1348137624",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -969,7 +1038,8 @@
                 }
             ],
             "description": "Symfony MonologBundle",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "1348137624"
         },
         {
             "name": "symfony/swiftmailer-bundle",
@@ -997,7 +1067,6 @@
                 "symfony/config": ">=2.1.0,<2.3-dev",
                 "symfony/yaml": ">=2.1.0,<2.3-dev"
             },
-            "time": "1348137776",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1024,7 +1093,8 @@
                 }
             ],
             "description": "Symfony SwiftmailerBundle",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "1348137776"
         },
         {
             "name": "symfony/symfony",
@@ -1089,7 +1159,6 @@
             "suggest": {
                 "doctrine/data-fixtures": "1.0.*"
             },
-            "time": "1348937500",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1123,7 +1192,8 @@
             "homepage": "http://symfony.com",
             "keywords": [
                 "framework"
-            ]
+            ],
+            "time": "1348937500"
         },
         {
             "name": "twig/extensions",
@@ -1142,7 +1212,6 @@
             "require": {
                 "twig/twig": "1.*"
             },
-            "time": "1346770278",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1170,7 +1239,8 @@
                 "debug",
                 "i18n",
                 "text"
-            ]
+            ],
+            "time": "1346770278"
         },
         {
             "name": "twig/twig",
@@ -1189,7 +1259,6 @@
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "1348936415",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1219,12 +1288,11 @@
             "homepage": "http://twig.sensiolabs.org",
             "keywords": [
                 "templating"
-            ]
+            ],
+            "time": "1348936415"
         }
     ],
-    "packages-dev": [
-
-    ],
+    "packages-dev": null,
     "aliases": [
 
     ],
@@ -1233,4 +1301,3 @@
 
     ]
 }
-
