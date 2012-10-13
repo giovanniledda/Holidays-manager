@@ -104,5 +104,13 @@ sonata_admin:
             # display a dashboard block
             - { position: left, type: sonata.admin.block.admin_list }
         groups:
-            store:
-                label: Products          
+            holidays_manager:
+                label: Holidays Manager
+
+services:
+    sonata.admin.extension:
+        class: Application\Sonata\UserBundle\Admin\Model\UserAdmin
+        tags:
+            - { name: sonata.admin.extension, target: sonata.user.admin.user }
+#            - { name: sonata.admin, manager_type: orm, group: some.menu, label: User }
+        arguments: [null, Sonata\UserBundle\Entity\User, SonataUserBundle:UserAdmin]               

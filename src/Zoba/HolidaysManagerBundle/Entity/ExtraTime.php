@@ -49,6 +49,10 @@ class ExtraTime {
         return $this->id;
     }
 
+    public function __toString() {
+        return $this->getDescription();
+    }
+
     /**
      * Set date
      *
