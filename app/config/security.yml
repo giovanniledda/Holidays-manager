@@ -8,15 +8,11 @@ security:
       iterations:       1
       
   providers:
-    chain_provider:
-      providers: [in_memory, user_db, fos_userbundle]
     in_memory:
-      users:
-        admin: { password: admin, roles: [ 'ROLE_ADMIN' ] }
-    user_db:    
-      entity: { class:  Zoba\UserBundle\Entity\User }
-    fos_userbundle:
-      entity: { class:  FOS\UserBundle\Entity\User }
+      memory:
+        users:
+          user:  { password: user, roles: [ 'ROLE_USER' ] }
+          admin: { password: admin, roles: [ 'ROLE_ADMIN' ] }
 
   role_hierarchy:
     ROLE_ADMIN:     ROLE_USER
@@ -55,3 +51,9 @@ security:
     - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
     - { path: ^/admin/, role: ROLE_ADMIN }
     #- { path: ^/_internal, roles: IS_AUTHENTICATED_ANONYMOUSLY, ip: 127.0.0.1 }
+
+
+  
+#  jms_security_extra:
+#    secure_controllers:  true
+#    secure_all_services: false

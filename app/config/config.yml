@@ -1,25 +1,26 @@
 imports:
-    - { resource: parameters.ini }
+    - { resource: parameters.yml }
     - { resource: security.yml }
 
 framework:
     #esi:             ~
-    translator:      { fallback: it }
-    secret:          %secret%
-    charset:         UTF-8
-    router:          { resource: "%kernel.root_dir%/config/routing.yml" }
-    form:            true
-    csrf_protection: true
-    validation:      { enable_annotations: true }
+    trust_proxy_headers:                false
+    default_locale:                     %locale%
+    translator:                         { fallback: it }
+    secret:                             %secret%
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: %kernel.debug%
+    form:                               true
+    csrf_protection:                    true
+    validation:                         { enable_annotations: true }
     templating:      
       engines: #assets_version: SomeVersionScheme
         - 'twig'
 #      form:
 #        resources:
 #          - 'TaskBundle:Form'
-    session:
-        default_locale: %locale%
-        auto_start:     true
+    session:          ~
 
 # Twig Configuration
 twig:
@@ -28,6 +29,7 @@ twig:
 
 # Assetic Configuration
 assetic:
+    bundles:        []
     debug:          %kernel.debug%
     use_controller: false
     # java: /usr/bin/java
@@ -59,12 +61,10 @@ swiftmailer:
     host:      %mailer_host%
     username:  %mailer_user%
     password:  %mailer_password%
-
-jms_security_extra:
-    secure_controllers:  true
-    secure_all_services: false
-    
-fos_user:
-    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
-    firewall_name: main
-    user_class: Zoba\UserBundle\Entity\User    
+    spool:     { type: memory }
+#
+#    
+#fos_user:
+#    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+#    firewall_name: main
+#    user_class: Zoba\UserBundle\Entity\User    
