@@ -111,6 +111,12 @@ services:
     sonata.admin.extension:
         class: Application\Sonata\UserBundle\Admin\Model\UserAdmin
         tags:
-            - { name: sonata.admin.extension, target: sonata.user.admin.user }
-#            - { name: sonata.admin, manager_type: orm, group: some.menu, label: User }
-        arguments: [null, Sonata\UserBundle\Entity\User, SonataUserBundle:UserAdmin]               
+#            - { name: sonata.admin.extension, target: sonata.user.admin.user }
+            - { name: sonata.admin, manager_type: orm, group: Users, label: User }
+        arguments: [null, Sonata\UserBundle\Entity\User, SonataUserBundle:CRUD]               
+
+#    zoba.holidaysManager.extraTime:
+#        class: Zoba\HolidaysManagerBundle\Admin\ExtraTimeAdmin;
+#        tags:
+#          - { name: sonata.admin, manager_type: orm, group: ExtraTimes, label: ExtraTimes }
+#        arguments: [null, Zoba\HolidaysManagerBundle\Entity\ExtraTime, SonataAdminBundle:CRUD]

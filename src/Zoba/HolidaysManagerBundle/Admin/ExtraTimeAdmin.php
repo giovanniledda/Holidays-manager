@@ -15,7 +15,12 @@ class ExtraTimeAdmin extends Admin {
                 ->add('date')
                 ->add('hour')
                 ->add('description')
-                ->add('is_holiday');
+                ->add('is_holiday')
+                ->add('_action', 'actions', array(
+                    'actions' => array(
+                        'edit' => array()
+                    )
+                ));
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper) {
