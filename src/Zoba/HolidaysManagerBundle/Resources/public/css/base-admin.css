@@ -50,6 +50,11 @@ textarea {
     border-radius: 6px;
 }
 
+.dropdown-menu li {
+  padding-bottom: 9px; 
+  height: 10px;  
+}
+
 .btn-icon-only {
     padding-right: 3px;
     padding-left: 3px;
