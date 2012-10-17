@@ -1,0 +1,21 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Holidays Manager (beta){% endblock %}
+{% block nav_list_li_class_home %}class="active"{% endblock %}
+
+
+{% block main_widget %}
+
+<div class="widget">
+
+    <div class="widget-header">
+        <i class="icon-file"></i>
+        <h3>{% trans %}Example Google map{% endtrans %}</h3>
+    </div> <!-- /widget-header -->
+
+    <div class="widget-content" id="map_container" style="width: 100%; height: 400px;">
+
+    </div> <!-- /widget-content -->
+
+</div> <!-- /widget -->
+{% endblock %}

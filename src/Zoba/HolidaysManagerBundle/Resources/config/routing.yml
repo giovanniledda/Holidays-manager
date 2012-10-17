@@ -1,3 +1,7 @@
+#######################
+#  DEFAULT CONTROLLER
+#######################
+
 holidays_index:
   pattern:  /holidays_index
   defaults: { _controller: ZobaHolidaysManagerBundle:Default:index }
@@ -30,3 +34,10 @@ clearall_extra_time:
   pattern:  /clearall_extra_time
   defaults: { _controller: ZobaHolidaysManagerBundle:Default:clearall }
 
+#######################
+#  TEST CONTROLLER
+#######################
+
+show_example_map:
+  pattern:  /show_example_map
+  defaults: { _controller: ZobaHolidaysManagerBundle:Test:index }

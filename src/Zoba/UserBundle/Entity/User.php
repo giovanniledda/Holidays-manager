@@ -5,6 +5,7 @@ namespace Zoba\UserBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface as UserInterface;
 use Symfony\Component\Security\Core\User\AdvancedUserInterface as AdvancedUserInterface;
+use Symfony\Component\Security\Core\User\EquatableInterface as EquatableInterface;
 use FOS\UserBundle\Entity\User as BaseUser;
 use Doctrine\Common\Collections\ArrayCollection;
 
@@ -14,7 +15,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * @ORM\Entity(repositoryClass="Zoba\UserBundle\Repository\UserRepository")
  * @ORM\Table(name="fos_user")
  */
-class User extends BaseUser implements AdvancedUserInterface, \Serializable {
+class User extends BaseUser implements AdvancedUserInterface, EquatableInterface, \Serializable {
 
     /**
      * @ORM\Column(type="integer")
@@ -43,10 +44,7 @@ class User extends BaseUser implements AdvancedUserInterface, \Serializable {
         
     }
 
-    /**
-     * @inheritDoc
-     */
-    public function equals(UserInterface $user) {
+    public function isEqualTo(UserInterface $user) {
         return $this->username === $user->getUsername();
     }
 
@@ -108,5 +106,7 @@ class User extends BaseUser implements AdvancedUserInterface, \Serializable {
     public function getIsActive() {
         return $this->is_active;
     }
+
+    
 
 }
