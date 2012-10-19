@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace Application\Sonata\UserBundle\Admin\Model;
 

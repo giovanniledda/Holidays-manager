@@ -1,4 +1,19 @@
 #######################
+#  CRUD CONTROLLER
+#######################
+
+ZobaHolidaysManagerBundle:
+  resource: "@ZobaHolidaysManagerBundle/Controller/"
+  type: annotation
+  prefix: 
+
+extra_time_admin_list:
+  pattern:  /extra_time_admin
+  defaults: { _controller: ZobaHolidaysManagerBundle:ExtraTime:index }
+
+
+
+#######################
 #  DEFAULT CONTROLLER
 #######################
 

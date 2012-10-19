@@ -1,6 +1,6 @@
 <?php
 
-namespace Zoba\HolidaysManagerBundle\Admin;
+namespace Zoba\HolidaysManagerBundle\Admin; 
 
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
