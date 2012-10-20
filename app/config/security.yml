@@ -28,15 +28,20 @@ security:
 
   firewalls:
     admin:
-      pattern:      /admin(.*)
+      switch_user:        true
+      context:            user
+      pattern:            /admin(.*)
       form_login:
           provider:       fos_userbundle
           login_path:     /admin/login
           use_forward:    false
           check_path:     /admin/login_check
           failure_path:   null
+          use_referer:    true
       logout:
           path:           /admin/logout
+          target:         /admin/login
+
       anonymous:    true
 
     dev:

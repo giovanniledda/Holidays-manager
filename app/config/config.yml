@@ -1,6 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: services.xml }
 
 framework:
     #esi:             ~
@@ -68,25 +69,9 @@ fos_user:
     firewall_name: main
 #    user_class: Zoba\UserBundle\Entity\User
     user_class: Application\Sonata\UserBundle\Entity\User
- 
-sonata_block:
-    default_contexts: [cms]
-    blocks:
-        sonata.admin.block.admin_list:
-            contexts:   [admin]
- 
-        #sonata.admin_doctrine_orm.block.audit:
-        #    contexts:   [admin]
- 
-        sonata.block.service.text:
-        sonata.block.service.action:
-        sonata.block.service.rss:
- 
-        # Some specific block from the SonataMediaBundle
-        #sonata.media.block.media:
-        #sonata.media.block.gallery:
-        #sonata.media.block.feature_media:
-          
+    group:
+        group_class: Application\Sonata\UserBundle\Entity\Group 
+
 sonata_admin:
     title:      Sonata Project
     title_logo: /bundles/sonataadmin/logo_title.png
@@ -94,7 +79,8 @@ sonata_admin:
         # default global templates
         layout:  SonataAdminBundle::standard_layout.html.twig
         ajax:    SonataAdminBundle::ajax_layout.html.twig
- 
+        dashboard: SonataAdminBundle:Core:dashboard.html.twig
+
         # default actions templates, should extend a global templates
         list:    SonataAdminBundle:CRUD:list.html.twig
         show:    SonataAdminBundle:CRUD:show.html.twig
@@ -104,15 +90,22 @@ sonata_admin:
             # display a dashboard block
             - { position: left, type: sonata.admin.block.admin_list }
         groups:
-            zoba:
-              label:   ExtraTimes
-
-services:
-    zoba.holidays_manager.admin.extra_time:
-        class: Zoba\HolidaysManagerBundle\Admin\ExtraTimeAdmin
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: Zoba, label: extra_time }
-        arguments: [null, Zoba\ExtraTimeBundle\Entity\ExtraTime, SonataAdminBundle:CRUD]
+            default: ~
+            
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+          
+          
+#
+#services:
+#    zoba.holidays_manager.admin.extra_time:
+#        class: Zoba\HolidaysManagerBundle\Admin\ExtraTimeAdmin
+#        tags:
+#            - { name: sonata.admin, manager_type: orm, group: Zoba, label: extra_time }
+#        arguments: [null, Zoba\ExtraTimeBundle\Entity\ExtraTime, SonataAdminBundle:CRUD]
 
 #services:
 #    sonata.admin.extension:

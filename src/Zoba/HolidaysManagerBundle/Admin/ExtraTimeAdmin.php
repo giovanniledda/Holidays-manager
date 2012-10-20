@@ -10,6 +10,8 @@ use Sonata\AdminBundle\Form\FormMapper;
 
 class ExtraTimeAdmin extends Admin {
 
+    protected $baseRouteName = 'extra_time_admin';
+    
     protected function configureFormFields(FormMapper $formMapper) {
         $formMapper
                 ->add('date')
